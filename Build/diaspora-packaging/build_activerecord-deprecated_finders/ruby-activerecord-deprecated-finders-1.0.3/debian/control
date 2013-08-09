@@ -1,0 +1,27 @@
+Source: ruby-activerecord-deprecated-finders
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Jackson Isaac <jacksonisaac2008@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~), gem2deb (>= 0.3.0~)
+Standards-Version: 3.9.3
+Vcs-Git: git://git.debian.org/pkg-ruby-extras/ruby-activerecord-deprecated-finders.git
+Vcs-Browser: http://git.debian.org/?p=pkg-ruby-extras/ruby-activerecord-deprecated-finders.git;a=summary
+Homepage: https://github.com/rails/activerecord-deprecated_finders
+XS-Ruby-Versions: all
+
+Package: ruby-activerecord-deprecated-finders
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${shlibs:Depends}, ${misc:Depends}, ruby | ruby-interpreter, minitest (>= 3), activerecord (>= 4.0.0.beta), sqlite3 (>= 1.3)
+Description: Ruby gem to deprecate finder option hashes
+ extracted from Active Record.
+ .
+ The activerecord-deprecated_finder is a deprecated finder API
+ that is extracted from Active Record.This Ruby library
+ will be used to extract and deprecate old-style finder
+ option hashes in Active Record. To provide deprecated
+ functionality it will be a dependency of Rails 4.0. It will
+ be removed as a dependency in Rails 4.1,
+ but it can be manually included in Gemfile and
+ it will continue to be maintained until Rails 5.

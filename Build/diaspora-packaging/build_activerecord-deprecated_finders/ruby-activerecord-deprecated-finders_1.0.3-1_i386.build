@@ -1,0 +1,401 @@
+dpkg-buildpackage: source package ruby-activerecord-deprecated-finders
+dpkg-buildpackage: source version 1.0.3-1
+dpkg-buildpackage: source distribution UNRELEASED
+dpkg-buildpackage: source changed by Jackson Isaac <jacksonisaac2008@gmail.com>
+ dpkg-source --before-build ruby-activerecord-deprecated-finders-1.0.3
+dpkg-source: info: applying helperpatch.patch
+ fakeroot debian/rules clean
+dh clean --buildsystem=ruby --with ruby
+   dh_testdir -O--buildsystem=ruby
+   dh_auto_clean -O--buildsystem=ruby
+/usr/lib/ruby/vendor_ruby/gem2deb.rb:17: warning: setting Encoding.default_external
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:31: warning: method redefined; discarding old visit_String
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:4: warning: previous definition of visit_String was here
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:39: warning: method redefined; discarding old register
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:12: warning: previous definition of register was here
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:43: warning: method redefined; discarding old format_time
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:16: warning: previous definition of format_time was here
+/usr/lib/ruby/1.9.1/rubygems/syck_hack.rb:115: warning: method redefined; discarding old to_s
+/usr/lib/ruby/1.9.1/rubygems/syck_hack.rb:44: warning: previous definition of to_s was here
+  Entering dh_ruby --clean
+  Leaving dh_ruby --clean
+   dh_clean -O--buildsystem=ruby
+ dpkg-source -b ruby-activerecord-deprecated-finders-1.0.3
+dpkg-source: info: using source format `3.0 (quilt)'
+dpkg-source: info: building ruby-activerecord-deprecated-finders using existing ./ruby-activerecord-deprecated-finders_1.0.3.orig.tar.gz
+dpkg-source: info: building ruby-activerecord-deprecated-finders in ruby-activerecord-deprecated-finders_1.0.3-1.debian.tar.gz
+dpkg-source: info: building ruby-activerecord-deprecated-finders in ruby-activerecord-deprecated-finders_1.0.3-1.dsc
+ dpkg-genchanges -S >../ruby-activerecord-deprecated-finders_1.0.3-1_source.changes
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build ruby-activerecord-deprecated-finders-1.0.3
+dpkg-source: info: unapplying helperpatch.patch
+dpkg-buildpackage: full upload (original source is included)
+W: /home/jackson/.pbuilderrc does not exist
+I: using fakeroot in build.
+I: Current time: Fri Aug  9 18:40:06 IST 2013
+I: pbuilder-time-stamp: 1376053806
+I: Building the build Environment
+I: extracting base tarball [/var/cache/pbuilder/base.tgz]
+I: creating local configuration
+I: copying local configuration
+I: mounting /proc filesystem
+I: mounting /run/shm filesystem
+I: mounting /dev/pts filesystem
+I: policy-rc.d already exists
+I: Obtaining the cached apt archive contents
+I: Installing the build-deps
+ -> Attempting to satisfy build-dependencies
+ -> Creating pbuilder-satisfydepends-dummy package
+Package: pbuilder-satisfydepends-dummy
+Version: 0.invalid.0
+Architecture: i386
+Maintainer: Debian Pbuilder Team <pbuilder-maint@lists.alioth.debian.org>
+Description: Dummy package to satisfy dependencies with aptitude - created by pbuilder
+ This package was created automatically by pbuilder to satisfy the
+ build-dependencies of the package being currently built.
+Depends: debhelper (>= 7.0.50~), gem2deb (>= 0.3.0~)
+dpkg-deb: building package `pbuilder-satisfydepends-dummy' in `/tmp/satisfydepends-aptitude/pbuilder-satisfydepends-dummy.deb'.
+Selecting previously unselected package pbuilder-satisfydepends-dummy.
+(Reading database ... 11334 files and directories currently installed.)
+Unpacking pbuilder-satisfydepends-dummy (from .../pbuilder-satisfydepends-dummy.deb) ...
+dpkg: pbuilder-satisfydepends-dummy: dependency problems, but configuring anyway as you requested:
+ pbuilder-satisfydepends-dummy depends on debhelper (>= 7.0.50~); however:
+  Package debhelper is not installed.
+ pbuilder-satisfydepends-dummy depends on gem2deb (>= 0.3.0~); however:
+  Package gem2deb is not installed.
+
+Setting up pbuilder-satisfydepends-dummy (0.invalid.0) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Initializing package states...
+Writing extended state information...
+The following NEW packages will be installed:
+  bsdmainutils{a} cpp-4.6{a} debhelper{a} devscripts{a} file{a} gcc-4.6{a} 
+  gcc-4.6-base{a} gem2deb{a} gettext{a} gettext-base{a} groff-base{a} 
+  intltool-debian{a} libasprintf0c2{a} libcroco3{a} libexpat1{a} libffi6{a} 
+  libglib2.0-0{a} libmagic1{a} libpipeline1{a} libpython3.3-minimal{a} 
+  libpython3.3-stdlib{a} libreadline5{a} libruby1.8{a} libruby1.9.1{a} 
+  libssl1.0.0{a} libunistring0{a} libxml2{a} libyaml-0-2{a} man-db{a} 
+  mime-support{a} po-debconf{a} python3{a} python3-minimal{a} python3.3{a} 
+  python3.3-minimal{a} ruby{a} ruby1.8{a} ruby1.8-dev{a} ruby1.9.1{a} 
+  ruby1.9.1-dev{a} rubygems{a} 
+0 packages upgraded, 41 newly installed, 0 to remove and 0 not upgraded.
+Need to get 0 B/40.2 MB of archives. After unpacking 107 MB will be used.
+Writing extended state information...
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libpipeline1:i386.
+(Reading database ... 11334 files and directories currently installed.)
+Unpacking libpipeline1:i386 (from .../libpipeline1_1.2.4-1_i386.deb) ...
+Selecting previously unselected package libssl1.0.0:i386.
+Unpacking libssl1.0.0:i386 (from .../libssl1.0.0_1.0.1e-3_i386.deb) ...
+Selecting previously unselected package groff-base.
+Unpacking groff-base (from .../groff-base_1.22.2-3_i386.deb) ...
+Selecting previously unselected package bsdmainutils.
+Unpacking bsdmainutils (from .../bsdmainutils_9.0.5_i386.deb) ...
+Selecting previously unselected package man-db.
+Unpacking man-db (from .../man-db_2.6.5-2_i386.deb) ...
+Selecting previously unselected package libasprintf0c2:i386.
+Unpacking libasprintf0c2:i386 (from .../libasprintf0c2_0.18.3-1_i386.deb) ...
+Selecting previously unselected package libmagic1:i386.
+Unpacking libmagic1:i386 (from .../libmagic1_1%3a5.14-2_i386.deb) ...
+Selecting previously unselected package libxml2:i386.
+Unpacking libxml2:i386 (from .../libxml2_2.9.1+dfsg1-2_i386.deb) ...
+Selecting previously unselected package libffi6:i386.
+Unpacking libffi6:i386 (from .../libffi6_3.0.13-4_i386.deb) ...
+Selecting previously unselected package libglib2.0-0:i386.
+Unpacking libglib2.0-0:i386 (from .../libglib2.0-0_2.36.3-3_i386.deb) ...
+Selecting previously unselected package libcroco3:i386.
+Unpacking libcroco3:i386 (from .../libcroco3_0.6.8-2_i386.deb) ...
+Selecting previously unselected package libexpat1:i386.
+Unpacking libexpat1:i386 (from .../libexpat1_2.1.0-4_i386.deb) ...
+Selecting previously unselected package libpython3.3-minimal.
+Unpacking libpython3.3-minimal (from .../libpython3.3-minimal_3.3.2-4_i386.deb) ...
+Selecting previously unselected package mime-support.
+Unpacking mime-support (from .../mime-support_3.54_all.deb) ...
+Selecting previously unselected package libpython3.3-stdlib.
+Unpacking libpython3.3-stdlib (from .../libpython3.3-stdlib_3.3.2-4_i386.deb) ...
+Selecting previously unselected package libreadline5:i386.
+Unpacking libreadline5:i386 (from .../libreadline5_5.2+dfsg-2_i386.deb) ...
+Selecting previously unselected package libunistring0:i386.
+Unpacking libunistring0:i386 (from .../libunistring0_0.9.3-5_i386.deb) ...
+Selecting previously unselected package libyaml-0-2:i386.
+Unpacking libyaml-0-2:i386 (from .../libyaml-0-2_0.1.4-2_i386.deb) ...
+Selecting previously unselected package python3.3-minimal.
+Unpacking python3.3-minimal (from .../python3.3-minimal_3.3.2-4_i386.deb) ...
+Selecting previously unselected package file.
+Unpacking file (from .../file_1%3a5.14-2_i386.deb) ...
+Selecting previously unselected package gettext-base.
+Unpacking gettext-base (from .../gettext-base_0.18.3-1_i386.deb) ...
+Selecting previously unselected package gcc-4.6-base:i386.
+Unpacking gcc-4.6-base:i386 (from .../gcc-4.6-base_4.6.4-4_i386.deb) ...
+Selecting previously unselected package cpp-4.6.
+Unpacking cpp-4.6 (from .../cpp-4.6_4.6.4-4_i386.deb) ...
+Selecting previously unselected package gettext.
+Unpacking gettext (from .../gettext_0.18.3-1_i386.deb) ...
+Selecting previously unselected package intltool-debian.
+Unpacking intltool-debian (from .../intltool-debian_0.35.0+20060710.1_all.deb) ...
+Selecting previously unselected package po-debconf.
+Unpacking po-debconf (from .../po-debconf_1.0.16+nmu2_all.deb) ...
+Selecting previously unselected package debhelper.
+Unpacking debhelper (from .../debhelper_9.20130630_all.deb) ...
+Selecting previously unselected package python3.3.
+Unpacking python3.3 (from .../python3.3_3.3.2-4_i386.deb) ...
+Selecting previously unselected package python3-minimal.
+Unpacking python3-minimal (from .../python3-minimal_3.3.2-3_i386.deb) ...
+Selecting previously unselected package python3.
+Unpacking python3 (from .../python3_3.3.2-3_i386.deb) ...
+Selecting previously unselected package devscripts.
+Unpacking devscripts (from .../devscripts_2.13.2_i386.deb) ...
+Selecting previously unselected package gcc-4.6.
+Unpacking gcc-4.6 (from .../gcc-4.6_4.6.4-4_i386.deb) ...
+Selecting previously unselected package libruby1.9.1.
+Unpacking libruby1.9.1 (from .../libruby1.9.1_1.9.3.194-8.1+b1_i386.deb) ...
+Selecting previously unselected package ruby1.9.1.
+Unpacking ruby1.9.1 (from .../ruby1.9.1_1.9.3.194-8.1+b1_i386.deb) ...
+Selecting previously unselected package ruby.
+Unpacking ruby (from .../ruby_1%3a1.9.3_all.deb) ...
+Selecting previously unselected package libruby1.8.
+Unpacking libruby1.8 (from .../libruby1.8_1.8.7.358-7.1_i386.deb) ...
+Selecting previously unselected package ruby1.8.
+Unpacking ruby1.8 (from .../ruby1.8_1.8.7.358-7.1_i386.deb) ...
+Selecting previously unselected package rubygems.
+Unpacking rubygems (from .../rubygems_1.8.24-1_all.deb) ...
+Selecting previously unselected package ruby1.8-dev.
+Unpacking ruby1.8-dev (from .../ruby1.8-dev_1.8.7.358-7.1_i386.deb) ...
+Selecting previously unselected package ruby1.9.1-dev.
+Unpacking ruby1.9.1-dev (from .../ruby1.9.1-dev_1.9.3.194-8.1+b1_i386.deb) ...
+Selecting previously unselected package gem2deb.
+Unpacking gem2deb (from .../archives/gem2deb_0.4.1_all.deb) ...
+Setting up libpipeline1:i386 (1.2.4-1) ...
+Setting up libssl1.0.0:i386 (1.0.1e-3) ...
+Setting up groff-base (1.22.2-3) ...
+Setting up bsdmainutils (9.0.5) ...
+update-alternatives: using /usr/bin/bsd-write to provide /usr/bin/write (write) in auto mode
+update-alternatives: using /usr/bin/bsd-from to provide /usr/bin/from (from) in auto mode
+Setting up man-db (2.6.5-2) ...
+Building database of manual pages ...
+Setting up libasprintf0c2:i386 (0.18.3-1) ...
+Setting up libmagic1:i386 (1:5.14-2) ...
+Setting up libxml2:i386 (2.9.1+dfsg1-2) ...
+Setting up libffi6:i386 (3.0.13-4) ...
+Setting up libglib2.0-0:i386 (2.36.3-3) ...
+No schema files found: doing nothing.
+Setting up libcroco3:i386 (0.6.8-2) ...
+Setting up libexpat1:i386 (2.1.0-4) ...
+Setting up libpython3.3-minimal (3.3.2-4) ...
+Setting up mime-support (3.54) ...
+update-alternatives: using /usr/bin/see to provide /usr/bin/view (view) in auto mode
+Setting up libpython3.3-stdlib (3.3.2-4) ...
+Setting up libreadline5:i386 (5.2+dfsg-2) ...
+Setting up libunistring0:i386 (0.9.3-5) ...
+Setting up libyaml-0-2:i386 (0.1.4-2) ...
+Setting up python3.3-minimal (3.3.2-4) ...
+Setting up file (1:5.14-2) ...
+Setting up gettext-base (0.18.3-1) ...
+Setting up gcc-4.6-base:i386 (4.6.4-4) ...
+Setting up cpp-4.6 (4.6.4-4) ...
+Setting up gettext (0.18.3-1) ...
+Setting up intltool-debian (0.35.0+20060710.1) ...
+Setting up po-debconf (1.0.16+nmu2) ...
+Setting up debhelper (9.20130630) ...
+Setting up python3.3 (3.3.2-4) ...
+Setting up python3-minimal (3.3.2-3) ...
+Setting up python3 (3.3.2-3) ...
+Setting up devscripts (2.13.2) ...
+Setting up gcc-4.6 (4.6.4-4) ...
+Setting up libruby1.9.1 (1.9.3.194-8.1+b1) ...
+Setting up ruby1.9.1 (1.9.3.194-8.1+b1) ...
+update-alternatives: using /usr/bin/gem1.9.1 to provide /usr/bin/gem (gem) in auto mode
+update-alternatives: using /usr/bin/ruby1.9.1 to provide /usr/bin/ruby (ruby) in auto mode
+Setting up ruby (1:1.9.3) ...
+Setting up libruby1.8 (1.8.7.358-7.1) ...
+Setting up ruby1.8 (1.8.7.358-7.1) ...
+Setting up rubygems (1.8.24-1) ...
+Setting up ruby1.8-dev (1.8.7.358-7.1) ...
+Setting up ruby1.9.1-dev (1.9.3.194-8.1+b1) ...
+Setting up gem2deb (0.4.1) ...
+Processing triggers for libc-bin ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Reading extended state information...
+Initializing package states...
+Writing extended state information...
+ -> Finished parsing the build-deps
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  fakeroot
+debconf: delaying package configuration, since apt-utils is not installed
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 0 B/116 kB of archives.
+After this operation, 335 kB of additional disk space will be used.
+Selecting previously unselected package fakeroot.
+(Reading database ... 16156 files and directories currently installed.)
+Unpacking fakeroot (from .../fakeroot_1.19-2_i386.deb) ...
+Processing triggers for man-db ...
+Setting up fakeroot (1.19-2) ...
+update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode
+I: Copying back the cached apt archive contents
+I: Copying source file
+I: copying [../ruby-activerecord-deprecated-finders_1.0.3-1.dsc]
+I: copying [../ruby-activerecord-deprecated-finders_1.0.3.orig.tar.gz]
+I: copying [../ruby-activerecord-deprecated-finders_1.0.3-1.debian.tar.gz]
+I: Extracting source
+dpkg-source: warning: extracting unsigned source package (ruby-activerecord-deprecated-finders_1.0.3-1.dsc)
+dpkg-source: info: extracting ruby-activerecord-deprecated-finders in ruby-activerecord-deprecated-finders-1.0.3
+dpkg-source: info: unpacking ruby-activerecord-deprecated-finders_1.0.3.orig.tar.gz
+dpkg-source: info: unpacking ruby-activerecord-deprecated-finders_1.0.3-1.debian.tar.gz
+dpkg-source: info: applying helperpatch.patch
+I: Building the package
+I: Running cd tmp/buildd/*/ && env PATH="/usr/sbin:/usr/bin:/sbin:/bin" dpkg-buildpackage -us -uc  -rfakeroot
+dpkg-buildpackage: source package ruby-activerecord-deprecated-finders
+dpkg-buildpackage: source version 1.0.3-1
+dpkg-buildpackage: source distribution UNRELEASED
+dpkg-buildpackage: source changed by Jackson Isaac <jacksonisaac2008@gmail.com>
+ dpkg-source --before-build ruby-activerecord-deprecated-finders-1.0.3
+dpkg-buildpackage: host architecture i386
+ fakeroot debian/rules clean
+dh clean --buildsystem=ruby --with ruby
+   dh_testdir -O--buildsystem=ruby
+   dh_auto_clean -O--buildsystem=ruby
+/usr/lib/ruby/vendor_ruby/gem2deb.rb:17: warning: setting Encoding.default_external
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:31: warning: method redefined; discarding old visit_String
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:4: warning: previous definition of visit_String was here
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:39: warning: method redefined; discarding old register
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:12: warning: previous definition of register was here
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:43: warning: method redefined; discarding old format_time
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:16: warning: previous definition of format_time was here
+/usr/lib/ruby/1.9.1/rubygems/syck_hack.rb:115: warning: method redefined; discarding old to_s
+/usr/lib/ruby/1.9.1/rubygems/syck_hack.rb:44: warning: previous definition of to_s was here
+  Entering dh_ruby --clean
+  Leaving dh_ruby --clean
+   dh_clean -O--buildsystem=ruby
+ dpkg-source -b ruby-activerecord-deprecated-finders-1.0.3
+dpkg-source: info: using source format `3.0 (quilt)'
+dpkg-source: info: building ruby-activerecord-deprecated-finders using existing ./ruby-activerecord-deprecated-finders_1.0.3.orig.tar.gz
+dpkg-source: info: building ruby-activerecord-deprecated-finders in ruby-activerecord-deprecated-finders_1.0.3-1.debian.tar.gz
+dpkg-source: info: building ruby-activerecord-deprecated-finders in ruby-activerecord-deprecated-finders_1.0.3-1.dsc
+ debian/rules build
+dh build --buildsystem=ruby --with ruby
+   dh_testdir -O--buildsystem=ruby
+   dh_auto_configure -O--buildsystem=ruby
+/usr/lib/ruby/vendor_ruby/gem2deb.rb:17: warning: setting Encoding.default_external
+   dh_auto_build -O--buildsystem=ruby
+/usr/lib/ruby/vendor_ruby/gem2deb.rb:17: warning: setting Encoding.default_external
+   dh_auto_test -O--buildsystem=ruby
+/usr/lib/ruby/vendor_ruby/gem2deb.rb:17: warning: setting Encoding.default_external
+ fakeroot debian/rules binary
+dh binary --buildsystem=ruby --with ruby
+   dh_testroot -O--buildsystem=ruby
+   dh_prep -O--buildsystem=ruby
+   dh_auto_install -O--buildsystem=ruby
+/usr/lib/ruby/vendor_ruby/gem2deb.rb:17: warning: setting Encoding.default_external
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:31: warning: method redefined; discarding old visit_String
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:4: warning: previous definition of visit_String was here
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:39: warning: method redefined; discarding old register
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:12: warning: previous definition of register was here
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:43: warning: method redefined; discarding old format_time
+/usr/lib/ruby/1.9.1/rubygems/psych_tree.rb:16: warning: previous definition of format_time was here
+/usr/lib/ruby/1.9.1/rubygems/syck_hack.rb:115: warning: method redefined; discarding old to_s
+/usr/lib/ruby/1.9.1/rubygems/syck_hack.rb:44: warning: previous definition of to_s was here
+  Entering dh_ruby --install
+install -d /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/debian/ruby-activerecord-deprecated-finders/usr/lib/ruby/vendor_ruby
+install -D -m644 /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/lib/active_record/deprecated_finders.rb /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/debian/ruby-activerecord-deprecated-finders/usr/lib/ruby/vendor_ruby/active_record/deprecated_finders.rb
+install -D -m644 /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/lib/active_record/deprecated_finders/relation.rb /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/debian/ruby-activerecord-deprecated-finders/usr/lib/ruby/vendor_ruby/active_record/deprecated_finders/relation.rb
+install -D -m644 /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/lib/active_record/deprecated_finders/collection_proxy.rb /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/debian/ruby-activerecord-deprecated-finders/usr/lib/ruby/vendor_ruby/active_record/deprecated_finders/collection_proxy.rb
+install -D -m644 /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/lib/active_record/deprecated_finders/base.rb /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/debian/ruby-activerecord-deprecated-finders/usr/lib/ruby/vendor_ruby/active_record/deprecated_finders/base.rb
+install -D -m644 /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/lib/active_record/deprecated_finders/association_builder.rb /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/debian/ruby-activerecord-deprecated-finders/usr/lib/ruby/vendor_ruby/active_record/deprecated_finders/association_builder.rb
+install -D -m644 /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/lib/active_record/deprecated_finders/dynamic_matchers.rb /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/debian/ruby-activerecord-deprecated-finders/usr/lib/ruby/vendor_ruby/active_record/deprecated_finders/dynamic_matchers.rb
+install -D -m644 /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/lib/active_record/deprecated_finders/version.rb /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/debian/ruby-activerecord-deprecated-finders/usr/lib/ruby/vendor_ruby/active_record/deprecated_finders/version.rb
+/usr/bin/ruby1.8 -I/usr/lib/ruby/vendor_ruby /usr/lib/ruby/vendor_ruby/gem2deb/test_runner.rb
+debian/ruby-tests.rb:7:in `require': ./test/associations_test.rb:38: syntax error, unexpected ':', expecting ')' (SyntaxError)
+...nd_or_create_by_status(status: 'active', week_day: 'sunday')
+                              ^
+./test/associations_test.rb:38: syntax error, unexpected ',', expecting kEND
+...te_by_status(status: 'active', week_day: 'sunday')
+                              ^
+./test/associations_test.rb:38: syntax error, unexpected ')', expecting kEND
+./test/associations_test.rb:39: syntax error, unexpected ':', expecting ')'
+...nd_or_create_by_status(status: 'active', week_day: 'sunday')
+                              ^
+./test/associations_test.rb:39: syntax error, unexpected ',', expecting kEND
+...te_by_status(status: 'active', week_day: 'sunday')
+                              ^
+./test/associations_test.rb:39: syntax error, unexpected ')', expecting kEND
+./test/associations_test.rb:45: syntax error, unexpected ':', expecting kEND
+....has_many :comments, readonly: 'a', order: 'b', limit: 'c', ...
+                              ^
+./test/associations_test.rb:45: syntax error, unexpected ',', expecting kEND
+...many :comments, readonly: 'a', order: 'b', limit: 'c', group...
+                              ^
+./test/associations_test.rb:45: syntax error, unexpected ',', expecting kEND
+...ts, readonly: 'a', order: 'b', limit: 'c', group: 'd', havin...
+                              ^
+./test/associations_test.rb:45: syntax error, unexpected ',', expecting kEND
+...: 'a', order: 'b', limit: 'c', group: 'd', having: 'e',
+                              ^
+./test/associations_test.rb:45: syntax error, unexpected ',', expecting kEND
+...: 'b', limit: 'c', group: 'd', having: 'e',
+                              ^
+./test/associations_test.rb:45: syntax error, unexpected ',', expecting kEND
+./test/associations_test.rb:46: syntax error, unexpected ',', expecting kEND
+...                  offset: 'f', select: 'g', uniq: 'h', inclu...
+                              ^
+./test/associations_test.rb:46: syntax error, unexpected ',', expecting kEND
+...     offset: 'f', select: 'g', uniq: 'h', include: 'i', cond...
+                              ^
+./test/associations_test.rb:46: syntax error, unexpected ',', expecting kEND
+...: 'f', select: 'g', uniq: 'h', include: 'i', conditions: 'j'
+                              ^
+./test/associations_test.rb:46: syntax error, unexpected ',', expecting kEND
+... 'g', uniq: 'h', include: 'i', conditions: 'j'
+                              ^
+./test/associations_test.rb:65: syntax error, unexpected ':', expecting kEND
+      @klass.has_many :comments, conditions: proc { 'omg' }
+                                            ^
+./test/associations_test.rb:73: syntax error, unexpected ':', expecting kEND
+      @klass.has_many :comments, conditions: proc { title }
+                                            ^
+./test/associations_test.rb:75: syntax error, unexpected ':', expecting ')'
+    @klass.new(title: 'omg').comments.where_values.must_include 'omg'
+                     ^
+./test/associations_test.rb:75: syntax error, unexpected ')', expecting kEND
+    @klass.new(title: 'omg').comments.where_values.must_include 'omg'
+                            ^
+./test/associations_test.rb:80: syntax error, unexpected '>'
+      @klass.has_many :comments, -> { limit 5 }
+                                   ^
+./test/associations_test.rb:87: syntax error, unexpected kDO_BLOCK, expecting kEND
+./test/associations_test.rb:88: syntax error, unexpected '>'
+      @klass.has_many :comments, -> { limit 5 }, :order=>'b'
+                                   ^
+./test/associations_test.rb:91: syntax error, unexpected $end, expecting kEND
+	from debian/ruby-tests.rb:7
+	from debian/ruby-tests.rb:7:in `each'
+	from debian/ruby-tests.rb:7
+WARNING: Test "ruby1.8" failed, but ignoring this test result.
+/usr/bin/ruby1.9.1 -I/usr/lib/ruby/vendor_ruby /usr/lib/ruby/vendor_ruby/gem2deb/test_runner.rb
+/usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require': cannot load such file -- active_record (LoadError)
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/test/helper.rb:3:in `<top (required)>'
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/test/associations_test.rb:1:in `<top (required)>'
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from debian/ruby-tests.rb:7:in `block in <main>'
+	from debian/ruby-tests.rb:7:in `each'
+	from debian/ruby-tests.rb:7:in `<main>'
+ERROR: Test "ruby1.9.1" failed. Exiting.
+dh_auto_install: dh_ruby --install /tmp/buildd/ruby-activerecord-deprecated-finders-1.0.3/debian/ruby-activerecord-deprecated-finders returned exit code 1
+make: *** [binary] Error 1
+dpkg-buildpackage: error: fakeroot debian/rules binary gave error exit status 2
+E: Failed autobuilding of package
+I: unmounting dev/pts filesystem
+I: unmounting run/shm filesystem
+I: unmounting proc filesystem
+I: cleaning the build env 
+I: removing directory /var/cache/pbuilder/build//3181 and its subdirectories

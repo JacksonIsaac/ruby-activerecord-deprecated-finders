@@ -1,0 +1,5 @@
+ruby-activerecord-deprecated-finders (1.0.3-1) UNRELEASED; urgency=low
+
+  * Initial release (Closes: #714242)
+
+ -- Jackson Isaac <jacksonisaac2008@gmail.com>  Sat, 20 Jul 2013 15:42:58 +0530

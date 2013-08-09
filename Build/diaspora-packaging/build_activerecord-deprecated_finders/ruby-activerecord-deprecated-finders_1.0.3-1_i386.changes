@@ -1,0 +1,32 @@
+Format: 1.8
+Date: Sat, 20 Jul 2013 15:42:58 +0530
+Source: ruby-activerecord-deprecated-finders
+Binary: ruby-activerecord-deprecated-finders
+Architecture: source all
+Version: 1.0.3-1
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Jackson Isaac <jacksonisaac2008@gmail.com>
+Description: 
+ ruby-activerecord-deprecated-finders - Ruby gem to deprecate finder option hashes
+Closes: 714242
+Changes: 
+ ruby-activerecord-deprecated-finders (1.0.3-1) UNRELEASED; urgency=low
+ .
+   * Initial release (Closes: #714242)
+Checksums-Sha1: 
+ 07397c33f47ab284518edf1f559712cc747eb7fe 1455 ruby-activerecord-deprecated-finders_1.0.3-1.dsc
+ 3d7492f3df115a4cef040ad2a10f46a3c5536840 11793 ruby-activerecord-deprecated-finders_1.0.3.orig.tar.gz
+ 2ee4111ce4c3e3c41012f93c14e2dd5ab63a1b24 2475 ruby-activerecord-deprecated-finders_1.0.3-1.debian.tar.gz
+ d12a4568e011d832a52e0ab53ae7605fd92c2a28 8294 ruby-activerecord-deprecated-finders_1.0.3-1_all.deb
+Checksums-Sha256: 
+ 8b8f81d7d78b01bfc050e43d4e779a5debd5bdc96dc2650db045cbb561525d38 1455 ruby-activerecord-deprecated-finders_1.0.3-1.dsc
+ f923a437239bf4db17faaf2e436290e306c44c7ab879a3f38a5dc7cd41e73cf3 11793 ruby-activerecord-deprecated-finders_1.0.3.orig.tar.gz
+ 580fa6b4e121dbdc0f5dab6415def666daac8f16c526ce59f2f8faaf2e614ec4 2475 ruby-activerecord-deprecated-finders_1.0.3-1.debian.tar.gz
+ b1787b9e1778ced19fa094128ec97b43084108f841f0454b3ac669532a4ede50 8294 ruby-activerecord-deprecated-finders_1.0.3-1_all.deb
+Files: 
+ 8592414ecdf3db9f41c20a2c1246e423 1455 ruby optional ruby-activerecord-deprecated-finders_1.0.3-1.dsc
+ 4e922b943de25c143f552df7f922b886 11793 ruby optional ruby-activerecord-deprecated-finders_1.0.3.orig.tar.gz
+ cb6d57958fd9f267431d5c9823126532 2475 ruby optional ruby-activerecord-deprecated-finders_1.0.3-1.debian.tar.gz
+ 2cf33428d3ab0ac9b1360eeaa19bfaad 8294 ruby optional ruby-activerecord-deprecated-finders_1.0.3-1_all.deb
